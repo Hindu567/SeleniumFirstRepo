@@ -45,7 +45,7 @@ public class paginationExample {
 			String orderID= driver.findElement(By.xpath("//table[contains(@class,'table table-bordered table-hover')]/tbody/tr["+r+"]/td[2]")).getText();
 			String customer= driver.findElement(By.xpath("//table[contains(@class,'table table-bordered table-hover')]/tbody/tr["+r+"]/td[4]")).getText();
 			
-			System.out.println("order ID is  "+ orderID+ "   customer is  " + customer );
+			System.out.println("order ID is  "+ orderID+ "   customer name is  " + customer );
 		}
 		
 		
