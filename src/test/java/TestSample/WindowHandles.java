@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -68,6 +70,9 @@ public class WindowHandles {
 	    //FileUtils.copyFile(printPage, content);
 	   // Files.write(printPage, content);
 		System.out.println("printed");
+		
+		// Set<String> allWindowHandles = driver.getWindowHandles();
+		List<WebElement> ls= driver.findElements(By.id(""));
 	}
 
 }
