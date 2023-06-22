@@ -27,9 +27,9 @@ public class DragandDrop {
 
 	WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(20));
 	WebElement el= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("\"//*[@id='bank']/li\"")));
-	WebElement From=driver.findElement(By.xpath("//*[@id='credit2']/a"));	
-         		
-         WebElement To=driver.findElement(By.xpath("//*[@id='bank']/li"));					
+	
+	WebElement From=driver.findElement(By.xpath("//*[@id='credit2']/a"));	     		
+    WebElement To=driver.findElement(By.xpath("//*[@id='bank']/li"));					
 		
          Actions act=new Actions(driver);						
          act.dragAndDrop(From, To).build().perform();	

@@ -1,10 +1,15 @@
 package TestSample;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.Base64;
 
 public class EncryptionSelenium {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws AWTException {
 		
 		String encrptData= "Password";
 		
@@ -16,6 +21,11 @@ public class EncryptionSelenium {
 		byte[] decode= Base64.getDecoder().decode(encodevalue.getBytes());
 		String decodevalue= new String(decode);
 		System.out.println(decodevalue);
+		
+		StringSelection sl= new StringSelection("");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sl, null);
+		Robot rb= new Robot();
+		rb.keyPress(KeyEvent.VK_CONTROL);
 
 	}
 

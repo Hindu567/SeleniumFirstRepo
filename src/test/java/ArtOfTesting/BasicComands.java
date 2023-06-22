@@ -7,8 +7,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BasicComands {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		WebDriver driver = new FirefoxDriver();
+		
+		
 		driver.get("");
 		driver.navigate().to("");
 		driver.navigate().forward();
