@@ -17,10 +17,15 @@ public class ExcelData {
 
 	public static void main(String[] args) throws IOException {
 		WebDriver driver = new FirefoxDriver();
+		
 		 File src=new File("C:\\Users\\hindumathi.matike\\Desktop\\ExcelData.xlsx");
+		 
 	     FileInputStream inps = new FileInputStream(src);
+	     
 	     XSSFWorkbook  workbook = new XSSFWorkbook(inps);
+	     
 	     XSSFSheet sheet = workbook.getSheet("Sheet1");
+	     
 	    // XSSFRow row = sheet.getRow(1);
 	     int row = sheet.getLastRowNum();
 	     int col= sheet.getRow(1).getLastCellNum();
@@ -33,6 +38,8 @@ public class ExcelData {
 	    	 if (cl.getCellType() == CellType.STRING)
 	            {
 	    		 	String url = cl.getStringCellValue();
+	    		 //	cl.getDateCellValue()
+	    		 //	cl.getNumericCellValue()
 	                driver.get(url);
 	            }
 	    	 try {
